@@ -7,8 +7,6 @@ const refs = {
 const galleryMarkup = createGalleryMarkup(galleryItems);
 refs.gallery.insertAdjacentHTML('beforeend', galleryMarkup);
 
-//refs.gallery.addEventListener("click", onGalleryClick);
-
 function createGalleryMarkup(galleryItems) {
   return galleryItems
     .map(
@@ -19,7 +17,7 @@ function createGalleryMarkup(galleryItems) {
     .join(' ');
 }
 
-let galareys = new SimpleLightbox('.gallery a', {
+new SimpleLightbox('.gallery a', {
   captionsData: 'alt',
   captionPosition: 'bottom',
   captionDelay: 250,
